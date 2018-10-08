@@ -18,46 +18,46 @@ int Menu(){
   return x;
 }
 void Check(int x){
-  double o1,o2;
+  double o1 = 0;
+  double o2 = 0;
   switch (x) {
     case 1:
-    ReadOperands();
     Add(o1,o2);
     break;
     case 2:
-    ReadOperands();
     Subtract(o1,o2);
     break;
     case 3:
-    ReadOperands();
     Multyply(o1,o2);
     break;
     case 4:
-    ReadOperands();
     Divide(o1,o2);
     break;
     case -1:
     return;
     default:
-    printf("Error , try again!\n");
+    printf("Input not allowed, please try again!\n");
     scanf("%d" ,&x);
     Check(x);
     break;
   }
 }
 double Multyply(double x1, double x2){
-  return 0;
+  return x1 * x2;
 }
 double Add(double x1, double x2){
-  return 0;
+  return x1+x2;
 }
 double Subtract(double x1, double x2){
-  return 0;
+  return x1-x2;
 }
 double Divide(double x1, double x2){
-
-  return 0;
+  if (x2 != 0) {
+    return x1/x2;
+  }
+  printf("Division by zero");
+  return -1;
 }
-void ReadOperands(double* x1, double* x2){
-  return 0;
+void GetOperands(double x1,double x2){
+
 }
